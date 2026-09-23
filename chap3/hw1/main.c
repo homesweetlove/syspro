@@ -2,27 +2,31 @@
 #include <string.h>
 #include "copy.h"
 
-#define N 5
-
-char lines[N][MAXLINE];
+char line[MAXLINE];
+char lines[5][MAXLINE];
+char temp[MAXLINE];
 
 int main() {
-  char line[MAXLINE];
-  char temp[MAXLINE];
-  int n = 0;
-  int i, j;
+  int len[5];
+  int n, i, j, t;
+  n = 0;
 
-  while (n < N && fgets(line, MAXLINE, stdin) != NULL) {
+  while (n < 5 && fgets(line, MAXLINE, stdin) != NULL) {
     line[strcspn(line, "\n")] = '\0';
+    len[n] = strlen(line);
     copy(line, lines[n]);
     n++;
   }
+
   for (i = 0; i < n - 1; i++) {
-    for (j = 0; j < n - 1 - i; j++) {
-      if (strlen(lines[j]) < strlen(lines[j + 1])) {
-        copy(lines[j], temp);
-        copy(lines[j + 1], lines[j]);
-        copy(temp, lines[j + 1]);
+    for (j = i + 1; j < n; j++) {
+      if (len[i] < len[j]) {
+        copy(lines[i], temp);
+        copy(lines[j], lines[i]);
+        copy(temp, lines[j]);
+        t = len[i];
+        len[i] = len[j];
+        len[j] = t;
       }
     }
   }
