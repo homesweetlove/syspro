@@ -2,6 +2,4 @@
 
 # syspro
 
-Coursework and practice files for the Systems Programming class.
-
-> The original README was only a short personal placeholder. This repository README is intentionally kept minimal.
+Poop lololol 😂
