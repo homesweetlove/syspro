@@ -3,3 +3,5 @@
 # syspro
 
 Poop lololol 😂
+
+시스템프로그래밍 수업 실습 저장소
