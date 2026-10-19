@@ -1,7 +1,16 @@
-[![English](https://img.shields.io/badge/README-English-24292f?style=for-the-badge)](./README.md) [![한국어](https://img.shields.io/badge/README-%ED%95%9C%EA%B5%AD%EC%96%B4-24292f?style=for-the-badge)](./README.ko.md)
+# System Programming Coursework
 
-# syspro
+Coursework and practice exercises for System Programming at Daegu Catholic University.
 
-Poop lololol 😂
+## Repository structure
 
-시스템프로그래밍 수업 실습 저장소
+- `chap3/` — Chapter 3 exercises
+- `chap4/` — Chapter 4 exercises
+- `chap5/` — Chapter 5 exercises
+- `chap6/` — Chapter 6 exercises
+
+## Scope
+
+This repository is maintained separately from other courses for class submissions and revision history. It contains learning exercises rather than a production application.
+
+[한국어 README](README.ko.md)
