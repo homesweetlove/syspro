@@ -6,13 +6,13 @@ PPT의 실습 문제 13개와 과제 4개를 정리한 파일이다. Linux(우�
 
 | 경로 | 내용 |
 | --- | --- |
-| `prob1/` | 1-1, 1-2, 1-3 프로세스 생성 |
-| `prob2/` | 2-1, 2-2 프로세스 기다리기 |
-| `prob3/` | 3-1, 3-2, 3-3 프로그램 실행 |
+| `prob1-1/`, `prob1-2/`, `prob1-3/` | 1-1, 1-2, 1-3 프로세스 생성 |
+| `prob2-1/`, `prob2-2/` | 2-1, 2-2 프로세스 기다리기 |
+| `prob3-1/`, `prob3-2/`, `prob3-3/` | 3-1, 3-2, 3-3 프로그램 실행 |
 | `prob4/` | 4 system() 함수의 원리 구현 |
-| `prob5/` | 5-1, 5-2 입출력 재지정 |
-| `prob6/` | 6-1, 6-2 프로세스 그룹 |
-| `assignments/` | 과제 1~2 실행 명령과 설명, 과제 3~4 쉘 프로그램 |
+| `prob5-1/`, `prob5-2/` | 5-1, 5-2 입출력 재지정 |
+| `prob6-1/`, `prob6-2/` | 6-1, 6-2 프로세스 그룹 |
+| `hw1/`~`hw4/` | 과제 1~2 실행 명령과 설명, 과제 3~4 쉘 프로그램 |
 
 ## 컴파일
 
@@ -23,46 +23,46 @@ cd ~/syspro/chap9
 make
 ```
 
-컴파일 후 실행 파일은 `build` 폴더에 생긴다. 예를 들어 `prob1_1.c`는 `build/prob1/prob1_1`로 실행한다.
+컴파일 후 실행 파일은 `build` 폴더에 생긴다. 예를 들어 `prob1-1/main.c`는 `build/prob1-1/main`로 실행한다.
 `build/`는 `.gitignore`에 등록되어 있으므로 GitHub에 실행 파일이 올라가지 않는다.
 
 `make`를 사용할 수 없으면 아래처럼 개별 컴파일할 수 있다.
 
 ```bash
-gcc -std=c11 -Wall -Wextra prob1/prob1_1.c -o prob1_1
-./prob1_1
+gcc -std=c11 -Wall -Wextra prob1-1/main.c -o main
+./main
 ```
 
 ## 실습 문제 실행
 
 ```bash
-./build/prob1/prob1_1
-./build/prob1/prob1_2
-./build/prob1/prob1_3
+./build/prob1-1/main
+./build/prob1-2/main
+./build/prob1-3/main
 
-./build/prob2/prob2_1
-./build/prob2/prob2_2
+./build/prob2-1/main
+./build/prob2-2/main
 
-./build/prob3/prob3_1
-./build/prob3/prob3_2
-./build/prob3/prob3_3 ls -l
+./build/prob3-1/main
+./build/prob3-2/main
+./build/prob3-3/main ls -l
 
-./build/prob4/prob4
+./build/prob4/main
 
-./build/prob5/prob5_1 output.txt
+./build/prob5-1/main output.txt
 cat output.txt
-./build/prob5/prob5_2 result.txt wc output.txt
+./build/prob5-2/main result.txt wc output.txt
 cat result.txt
 
-./build/prob6/prob6_1
-./build/prob6/prob6_2
+./build/prob6-1/main
+./build/prob6-2/main
 ```
 
 ## 과제 실행
 
-- **과제 1, 2:** `assignments/assignment1_jobs.md`, `assignments/assignment2_jobcontrol.md`의 명령을 PuTTY Bash 터미널에서 직접 실행하고 출력 결과를 확인한다.
-- **과제 3:** `./build/assignments/assignment3_shell`을 실행한다.
-- **과제 4:** `./build/assignments/assignment4_shell`을 실행한다.
+- **과제 1, 2:** `hw1/assignment1_jobs.md`, `hw2/assignment2_jobcontrol.md`의 명령을 PuTTY Bash 터미널에서 직접 실행하고 출력 결과를 확인한다.
+- **과제 3:** `./build/hw3/main`을 실행한다.
+- **과제 4:** `./build/hw4/main`을 실행한다.
 
 과제 3의 입력 예시는 다음과 같다.
 
